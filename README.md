@@ -47,12 +47,11 @@ For help with the options and commands, access a list of arguments and their des
 - Training (for any supported modality, i.e., audio, bm, body-tracking):
 
 Audio (RAVDESS dataset):
-
 `python xr2learn_enablers_cli/xr2learn_enablers.py --experiment_id development-model train --dataset ravdess --features_type ssl --ssl_pre_train encoder_fe --ed_training true`
 
 
 Bio-measurements (XRoom dataset): 
-`python xr2learn_enablers_cli/xr2learn_enablers.py --experiment_id development-model train --dataset Xroom --modality bm --features_type ssl --ssl_pre_train encoder_fe --ed_training true`
+`python xr2learn_enablers_cli/xr2learn_enablers.py --experiment_id development-model train --dataset Xroom --modality bm --features_type ssl --ssl_pre_train encoder_only --ed_training true`
 
 Body-tracking(XRoom dataset): 
 `python xr2learn_enablers_cli/xr2learn_enablers.py --experiment_id development-model train --dataset Xroom --modality body-tracking --features_type none --ssl_pre_train none --ed_training true`

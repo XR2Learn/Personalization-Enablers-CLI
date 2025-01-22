@@ -29,14 +29,12 @@
       "create_splits": true,
       "get_stats": true,
       "get_ssl": true,
-      "use_sensors": [
-        "gsr",
-        "ppg"
-      ],
+      "use_sensors": ["gsr", "ppg"],
       "seq_len": 5,
       "frequency": 10,
-      "overlap": 0.0,
-      "resample_freq": 10
+      "overlap": 0.8,
+      "resample_freq": 10,
+      "borders": [0.4, 0.6]
     },
     "encoder_config": {
       "from_module": "encoders.cnn1d",
@@ -46,14 +44,14 @@
         "in_channels": 2,
         "len_seq": 50,
         "out_channels": [
-          16,
-          32,
-          64
+          128,
+          256,
+          512
         ],
         "kernel_sizes": [
-          3,
-          3,
-          3
+          7,
+          7,
+          7
         ],
         "stride": 1
       },
@@ -81,7 +79,8 @@
       "kwargs": {
         "lr": 0.0001,
         "optimizer_name": "adam",
-        "freeze_encoder": true
+        "freeze_encoder": false,
+        "class_weights": [2.5, 1.0, 2.5]
       }
     },
     "augmentations": {
@@ -138,7 +137,9 @@
     },
     "pre_processing_config": {
       "seq_len": 1,
-      "frequency": 10
+      "frequency": 10,
+      "overlap": 0.5,
+      "borders": [0.4, 0.6]
     },
     "encoder_config": {
       "from_module": "encoders.cnn1d",
@@ -147,9 +148,13 @@
         "in_channels": 21,
         "len_seq": 10,
         "out_channels": [
-          64
+          128,
+          256,
+          512
         ],
         "kernel_sizes": [
+          3,
+          3,
           3
         ],
         "stride": 1
@@ -158,15 +163,14 @@
     },
     "sup_config": {
       "epochs": 25,
-      "batch_size": 16,
-      "dense_neurons": [
-        64
-      ],
-      "dropout": 0.5,
+      "batch_size": 128,
+      "dense_neurons": [64],
+      "dropout": 0.2,
       "kwargs": {
         "lr": 0.0003,
         "optimizer_name": "adam",
-        "freeze_encoder": false
+        "freeze_encoder": false,
+        "class_weights": [1.0, 0.1, 1.0]
       }
     }
   }
