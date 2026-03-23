@@ -182,4 +182,10 @@ Please refer to [LICENSE.md](LICENSE.md) document for more details.
 
 [Diagram with Architecture Overview](/images/CLI-Enablers-orverview-DemoUI.png)
 
+## Relevant Wiki pages
+- [https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Getting-Started](https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Getting-Started)
+- [https://github.com/XR2Learn/.github/wiki/Personalization-Enablers-Overviewhttps://github.com/XR2Learn/.github/wiki/Which-personalization-enablers-do-I-need%3F](https://github.com/XR2Learn/.github/wiki/Personalization-Enablers-Overviewhttps://github.com/XR2Learn/.github/wiki/Which-personalization-enablers-do-I-need%3F)
+- [https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Command-Line-Interface-(CLI)](https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Command-Line-Interface-(CLI))
+- [https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Configuration-File](https://github.com/XR2Learn/.github/wiki/Personalization-Enablers:-Configuration-File)
+
 [CHANGELOG.md]: CHANGELOG.md
